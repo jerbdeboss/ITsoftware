@@ -1,0 +1,207 @@
+body{
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 100%;
+    background-color: darkkhaki;
+}
+.container{
+    display:grid;
+    grid-template: 1fr;
+    color: cyan;
+}
+.nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;
+    text-decoration-color: darkcyan;
+}
+.left-side{
+    display: flex;
+    color: blueviolet;
+    }
+    .nav-wrapper>.left-side>div{
+        margin-right: 20px;
+        font-size: 0.9em;
+        text-transform: uppercase;
+        color: cadetblue;
+    }
+    .nav-link-wrapper{
+        border-bottom:  1 px solid transparent;
+        transition: border-bottom 0.5s;
+    }
+    .nav-link-wrapper a{
+        color: #b12121;
+        text-decoration: none;
+        transition: 0.5s;
+    }
+    .nav-link-wrapper :hover{
+        border-bottom: 1px solid rgb(16, 185, 38);
+    }
+    .nav-link-wrapper a:hover{
+        color: black;
+    }
+    .active-nav-link{
+        border-bottom: 1px solid black;
+    }
+    .active-nav-link a{
+        color: black!important;}
+        .login1{
+            background-color: blue;
+            padding:  15 32px;
+            display: inline-block;
+        }
+    /*portfolio */
+    .portfolio-items-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+    .portfolio-item-wrapper{
+        position: relative;
+
+    }
+    .portfolio-img-background{
+        height: 1000px;
+        width: 1400px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; 
+
+    }
+    .img-text-wrapper{
+        position: absolute;
+        top:0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        text-align: center;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    .imag-text-wrapper .subtitle{
+        transition: 1s;
+    }
+    .img-text-wrapper:hover .subtitle{
+        font-weight: 600;
+        color:rgb(76, 160, 68);
+
+    }
+    .logo-wrapper{
+        width: 20%;
+        margin-bottom: 900px;
+    position: fixed;}
+        
+    .subtitle{
+        font-weight: 700;
+        color: green;
+    }
+    .img-darken{
+        transition: 1s;
+        filter: brightness(10%);
+
+    }
+    .h1{
+        transform: rotateX(10deg);
+        text-shadow: darkolivegreen;
+
+    }
+    /*about page*/
+    .two-column-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+    .profile-image-wrapper img{
+        width: 100%;
+    }
+    .profile-content-wrapper{
+        padding: 30px;
+    }
+    .profile-content-wrapper h1{
+        color:rgb(144, 158, 238);
+
+    }
+.social-icons {
+  text-align: center;
+  }  
+.social-icons li {
+  display:inline-block;
+  list-style-type:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  }
+.social-icons li a {
+  border-bottom: none;
+  }
+.social-icons li img {
+  width:70px;
+  height:70px;
+  margin-right: 20px;
+}
+.cd-headline.rotate-1 .cd-words-wrapper{
+    display: inline-block;
+    perspective: 300px;
+    color: darkgreen;
+}
+.cd-headline.rotate-1 b{
+    opacity: 0;
+    transform-origin: 50% 100%;
+    transform: rotateX(180deg);
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: darkgreen;
+
+}
+.cd-headline.rotate-1 b.is-visible{
+    position: relative;
+    opacity: 1;
+    transform: rotateX(0deg);
+    animation: cd-rotate-1-in 1.2s;
+    color: darkgreen;
+
+}
+.cd-headline.rotate-1 b.is-hidden {
+    transform: rotateX(180deg);
+    animation: cd-rotate-1-out 1.2s;
+    color: darkgreen;
+}
+@keyframes cd-rotate-1-in {
+  0% {
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
+  35% {
+    transform: rotateX(120deg);
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes cd-rotate-1-out {
+  0% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  35% {
+    transform: rotateX(-40deg);
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
+}
+

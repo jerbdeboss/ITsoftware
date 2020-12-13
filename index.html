@@ -1,0 +1,107 @@
+<!DOCTYPE html><html>
+<head> <title>JERB ELECTRONICS COMPANY</title><link rel="stylesheet"href="styles.css"></head>
+<body>
+    <div class="container">
+            <div class="nav-wrapper">
+                <div class="left-side">
+                    <div class="nav-link-wrapper active-nav-link">
+                     <a href="index.html">Home</a>
+                    </div>
+                    <div class="nav-link-wrapper active-nav-link">
+                        <a href="register.html">REGISTER</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                        <a href="about.html">About</a>
+                    </div>
+                    <div class="nav-link-wrapper active-nav-link">
+                        <a href="login1.html">Login</a>
+                    </div>
+                    </div>
+                    <div class="right-side">
+                        <div class="brand">
+                            <div>JERB GIDEON</div>
+                    </div>
+                </div>
+            </div> 
+    </div>
+    <div class="content-wrapper">
+        <div class="portfolio-items-wrapper">
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background"style="background-image: url(coding%20pics/photo-1498050108023-c5249f4df085.jpeg)">
+                    
+                        <div class="img-text-wrapper">
+                           <div class="logo-wrapper">
+                               <img src="C:\Users\Jerb\OneDrive\Documents\Visual Studio 2019\coding pics\logo\IT 5.jpeg">
+                           </div> 
+                           <div class="subtitle">
+                           </div>
+                           <section class="cd-intro"><h1 class="cd-headline rotate-1"><span>WE OFFER THE BEST IT SERVICES</span>
+                        <span class="cd-words-wrapper"><b class="is-visible">AROUND THE GLOBE</b><b>WEB DEVELOPMENT</b>
+                        <b>SOFTWARE DEVELOPMENT</b></span></h1></section>   
+                           </div>
+                        </div>
+
+                    </div>
+                 </div>
+        </div>
+    </div>
+</body> 
+<script>
+    const portfolioItems= document.querySelectorAll('.portfolio-items-wrapper')
+    portfolioItems.forEach(portfolioItems =>{
+        portfolioItem.addEventListener('mouseover',()=>{
+           portfolioItem.childNodes[1].classList.add('img-darken');
+
+        })
+        portfolioItem.addEventListener('mouseout', () => {
+            portfolioItem.childNodes[1].classList.remove('img-darken');
+        })
+    })
+
+    var animationDelay = 2500;
+
+        animateHeadline($('.cd-headline'));
+
+        function animateHeadline($headlines) {
+            $headlines.each(function () {
+                var headline = $(this);
+                //trigger animation
+                setTimeout(function () { hideWord(headline.find('.is-visible')) }, animationDelay);
+                //other checks here ...
+            });
+        } function hideWord($word) {
+                var nextWord = takeNext($word);
+                switchWord($word, nextWord);
+                setTimeout(function () { hideWord(nextWord) }, animationDelay);
+            }
+
+            function takeNext($word) {
+                return (!$word.is(':last-child')) ? $word.next() : $word.parent().children().eq(0);
+            }
+
+            function switchWord($oldWord, $newWord) {
+                $oldWord.removeClass('is-visible').addClass('is-hidden');
+                $newWord.removeClass('is-hidden').addClass('is-visible');}
+                singleLetters($('.cd-headline.letters').find('b'));
+
+                    function singleLetters($words) {
+                        $words.each(function () {
+                            var word = $(this),
+                                letters = word.text().split(''),
+                                selected = word.hasClass('is-visible');
+                            for (i in letters) {
+                                letters[i] = (selected) ? '<i class="in">' + letters[i] + '</i>' : '<i>' + letters[i] + '</i>';
+                            }
+                            var newLetters = letters.join('');
+                            word.html(newLetters);
+                        });
+                    }
+</script>
+<ul class="social-icons">
+    <li><a href="http://www.facebook.com"><img src="coding pics/facebook (1).png" /></a></li>
+    <li><a href="http://www.youtube.com"><img src="coding pics/youtube (1).png" /></a></li>
+    <li><a href="http://www.pinterest.com"><img src="coding pics/pinterest.png" /></a></li>
+    <li><a href="http://www.google.com"><img src="coding pics/google-plus.png" /></a></li>
+</ul>
+    
+</html>
